@@ -9,6 +9,17 @@ public class Radio {
     private int currentVolume;
 
 
+    public Radio(int amount) {
+
+        maxStation = amount - 1;
+
+    }
+
+    public Radio() {
+        maxStation = 10;
+
+    }
+
     public void setCurrentStation(int newCurrentStation) {
         if (newCurrentStation < minStation) {
             return;
@@ -44,17 +55,6 @@ public class Radio {
         this.currentStation = currentStation;
     }
 
-    public Radio(int amount) {
-
-        this.minStation = minStation;
-        this.maxStation = maxStation;
-
-    }
-
-    public Radio() {
-
-        this.maxStation = 10;
-    }
 
     public void setCurrentVolume(int newCurrentVolume) {
         if (newCurrentVolume < minVolume) {
